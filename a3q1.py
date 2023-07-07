@@ -13,3 +13,12 @@ def main():
         print("Container types: 's' for stack, 'q' for queue")
         return
 
+    container_type = sys.argv[1]
+    container = None
+
+    if container_type == 's':
+        container = Stack()
+    elif container_type == 'q':
+        container = Queue()
+
+
