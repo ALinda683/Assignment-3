@@ -21,4 +21,34 @@ def main():
     elif container_type == 'q':
         container = Queue()
 
+    while True:
+        command = input("Please enter a command: ")
+
+        if command == 'add':
+            value = input("Please enter a value to add: ")
+            container.push(value)
+        elif command == 'peak':
+            if container.is_empty():
+                print("Container is empty")
+            else:
+                print(container.peek())
+        elif command == 'remove':
+            if container.is_empty():
+                print("Container is empty")
+            else:
+                print(container.pop())
+        elif command == 'help':
+            print("Possible actions: ")
+            print("- add: Add a value to the container")
+            print("- peak: Get the first value in the container")
+            print("- remove: Remove the first value from the container")
+            print("- help: Print available actions")
+            print("- quit: End the program")
+        elif command == 'quit':
+            print("Goodbye.")
+            break
+        else:
+            print("Invalid command. Type 'help' to see available actions.")
+
+
 
